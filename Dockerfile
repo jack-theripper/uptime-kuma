@@ -1,3 +1,4 @@
-FROM louislam/uptime-kuma
-EXPOSE 3001
-VOLUME . /app/data
+FROM louislam/uptime-kuma:1
+EXPOSE 3101
+VOLUME uptime-kuma:/app/data
+ENTRYPOINT ["node", "./server/server.js"]
